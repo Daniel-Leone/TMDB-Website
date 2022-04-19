@@ -1,38 +1,88 @@
+*{
+  font-family: sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body{
+  background-color: rgb(10, 10, 174);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.movieContainer{
+  width: 70%;
+  margin: auto;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie{
+  display: flex;
+  margin: 3rem 0;
+  z-index: 10;
+}
+
+.movieImgContainer{
+  width: 30vw;
+  height: 35vh;
+}
+
+.movieImgContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.infoMovie{
+  padding: .5rem 1rem;
+}
+
+.infoMovie a{
+  color: rgb(0, 136, 255);
+  text-decoration: none;
+}
+
+.active{
+  color: rgb(67, 236, 5);
+}
+
+.paginacionContainer{
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  height: 2rem;
+}
+
+.paginacion{
+  margin-left: .5rem;
+  cursor: pointer;
+  color: rgb(0, 136, 255);
+}
+
+.paginacion a{
+  padding: 0 .3rem;
+}
+
+.paginacion a:hover{
+  color: rgb(67, 236, 5);
+}
+
+.divisorBar{
+  width: 90vw;
+  background-color: #ccc;
+  border-top: .1px solid #ccc;
+}
+
+.infoMovieDB{
+  background-color: red;
+  z-index: 10;
+  width: 20vw;
+  height: 30vh;
 }
