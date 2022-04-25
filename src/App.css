@@ -7,7 +7,7 @@
 }
 
 .body{
-  background-color: rgb(10, 10, 174);
+  background-color: rgb(3, 3, 146);
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -23,10 +23,36 @@
   position: relative;
 }
 
+.corazonContainer{
+  width: 20px;
+	height: 22px;
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.corazon{
+  width: 24px;
+	height: 24px;
+	background: #FF5252;
+	clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
+	transform: scale(.8);
+}
+
+.favorito{
+  width: 24px;
+	height: 24px;
+	background: #FF5252;
+  clip-path: path("M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z") !important;
+  transform: scale(.8);
+}
+
 .movie{
   display: flex;
   margin: 3rem 0;
   z-index: 10;
+  background-color: rgb(2, 2, 100);
+  padding: .5rem;
 }
 
 .movieImgContainer{
@@ -85,4 +111,112 @@
   z-index: 10;
   width: 20vw;
   height: 30vh;
+}
+
+.ingresarButton{
+  position: absolute;
+  top: .5rem;
+  right: 2rem;
+  z-index: 1;
+}
+
+.ingresarButton button{
+  background-color: transparent;
+  color: #ccc;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: .2s;
+  padding: .4rem .6rem;
+}
+
+.ingresarButton button:hover{
+  background-color: rgb(2, 2, 100);
+}
+
+.loginRegisterPage{
+  background-color: rgb(3, 3, 146);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.loginRegisterPage form{
+  background-color: rgb(2, 2, 100);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+}
+
+.loginRegisterPage form input{
+  margin: 1rem;
+  padding: .5rem 2rem;
+  text-align: center;
+}
+
+.currentUser{
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  right: 2rem;
+  top: 1rem;
+  align-items: center;
+  transition: .2s;
+  padding: 0 .5rem;
+  cursor: pointer;
+}
+
+.currentUser:hover{
+  background-color: rgb(2, 2, 100);
+}
+
+.currentUser h4{
+  color: #ccc;
+}
+
+.userImg{
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1rem;
+}
+
+.userImg img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.userOptions{
+  width: 20vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  background-color: rgb(2, 2, 100);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userOptions ul li{
+  list-style-type: none;
+  color: #ccc;
+  padding: 1rem .5rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.userOptions ul li:hover{
+  background-color: rgb(1, 1, 74);
+}
+
+.userOptions ul{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }

@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Paginacion from './Paginacion'
 import Movie from './Movie'
 import SelectCategory from './SelectCategory';
+import { firebaseConfig } from './FirebaseUtil';
 
 const ComponentePrueba = () => {
     const [pagina, setPagina] = useState(1);
     const totalPorPagina = 5;
     const [peliculas, setPeliculas] = useState([]);
-    const [url, setUrl] = useState(1)  
+    const [url, setUrl] = useState(1)
+
+    firebaseConfig()
 
     const FEATURED_API = `https://api.themoviedb.org/4/list/${url}?page=1&api_key=a9b5c9d7e530ae7246596ee7ac01b435`;
 
@@ -17,7 +20,6 @@ const ComponentePrueba = () => {
         fetch(FEATURED_API)
           .then((res) => res.json())
           .then((data) => {
-            console.log(data.name);
             if (data.status_code !== 34) {
                 setPeliculas(data.results);
             }
@@ -36,7 +38,6 @@ const ComponentePrueba = () => {
     );
   return (
     <div className='body'>
-
       {
           <div style={{display: 'flex', flexDirection: 'row'}}>
 
